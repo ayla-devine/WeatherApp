@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(126, 246, 246);
+}
+
+.weather-app {
+    background: lightskyblue;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(65, 50, 100, 0.08);
+}
