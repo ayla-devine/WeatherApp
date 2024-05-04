@@ -8,8 +8,6 @@ function refreshWeather(response){
     let timeElement= document.querySelector("#time");
     let date= new Date(response.data.time * 1000);
 
-    console.log(response.data);
-
     placeElement.innerHTML= response.data.city;
     descriptionElement.innerHTML=response.data.condition.description;
     humidityElement.innerHTML= `${response.data.temperature.humidity}%`;
@@ -31,6 +29,9 @@ let days= [
      "Saturday"
     ];
 let day = days[date.getDay()];
+if (minutes<10) {
+    minutes= `0${minutes}`;
+}
 
 return `${day} ${hours}:${minutes}`;
 }
